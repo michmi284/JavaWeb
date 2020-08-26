@@ -1,4 +1,4 @@
-package servlet;
+package com.michmi.servlet;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;

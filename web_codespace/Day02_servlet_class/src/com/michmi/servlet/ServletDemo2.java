@@ -1,4 +1,4 @@
-package servlet;
+package com.michmi.servlet;
 
 import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
