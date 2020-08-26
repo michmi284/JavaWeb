@@ -36,8 +36,6 @@ public class RequestDemo1 extends HttpServlet
         //7.获取客户机IP地址 0:0:0:0:0:0:0:1
         String remoteAddr = req.getRemoteAddr();
         System.out.println("remoteAddr" + remoteAddr);
-
-
     }
 
     @Override
