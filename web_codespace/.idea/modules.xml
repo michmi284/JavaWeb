@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Day01_servlet_demo/Day01_demo2_servlet_new.iml" filepath="$PROJECT_DIR$/Day01_servlet_demo/Day01_demo2_servlet_new.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day01_servlet_demo/Day01_servlet_demo.iml" filepath="$PROJECT_DIR$/Day01_servlet_demo/Day01_servlet_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day02_servlet_class/Day02_servlet_class.iml" filepath="$PROJECT_DIR$/Day02_servlet_class/Day02_servlet_class.iml" />
     </modules>
   </component>
 </project>
