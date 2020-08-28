@@ -24,11 +24,18 @@ public class ServletDemo3 extends HttpServlet
         System.out.println("ServletPath" + servletPath);
         //4.获取get方式的请求参数
         String queryString = req.getQueryString();
-        System.out.println("queryString"+queryString);
-//5.获取URI
+        System.out.println("queryString" + queryString);
+        //5.获取URI
         String requestURI = req.getRequestURI();
-        System.out.println("requestURI"+requestURI);
-    //6.获取协议版本
+        StringBuffer requestURL = req.getRequestURL();
+        System.out.println("requestURI" + requestURI);
+        System.out.println("requestURL" + requestURL);
+        //6.获取协议版本
+        String protocol = req.getProtocol();
+        System.out.println("protocol" + protocol);
+        //7.获取客户机IP地址 0:0:0:0:0:0:0:1
+        String remoteAddr = req.getRemoteAddr();
+        System.out.println("remoteAddr" + remoteAddr);
 
 
     }
