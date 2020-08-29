@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
         // 3.先获取 预先生成验证码
         HttpSession session = req.getSession();
         String checkCode_session = (String) session.getAttribute("checkCode_session");
-        // 4.删除seession中的验证码
+        // 4.删除session中的验证码
         session.removeAttribute("checkCode_session");
         // 5.先判断验证码是否正确
         if (checkCode_session != null && checkCode_session.equalsIgnoreCase(checkCode)){
