@@ -27,8 +27,8 @@ public class UserListServlet extends HttpServlet
         UserServiceImpl service = new UserServiceImpl();
         List<User> users = service.findAll();
         // 2.将数据存入req中
-        req.setAttribute("users",users);
+        req.setAttribute("users", users);
         // 3.转发到List.jsp页面中
-req.getRequestDispatcher("/list.jsp").forward(req,resp);
+        req.getRequestDispatcher("/list.jsp").forward(req, resp);
     }
 }
