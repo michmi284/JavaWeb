@@ -13,5 +13,14 @@ public interface UserService
     //查询所有用户信息
     public List<User> findAll();
 
+    void addUser(User user);
+
+    void updateUser(User user);
+
+    void deleteUser(String id);
+
+    User findUserById(String id);
+
+    public User login(User user);
 
 }

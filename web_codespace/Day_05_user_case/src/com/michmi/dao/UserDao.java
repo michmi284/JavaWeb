@@ -8,4 +8,14 @@ public interface UserDao
 {
     //用户操作dao
     public List<User> findAll();
+
+    void add(User user);
+
+    void update(User user);
+
+    User findById(int id);
+
+    void delete(int id);
+
+    public User findUserByUserNameAndPassword(String username, String password);
 }

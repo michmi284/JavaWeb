@@ -7,8 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/Day02_servlet_class/Day02_servlet_class.iml" filepath="$PROJECT_DIR$/Day02_servlet_class/Day02_servlet_class.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day03__Request/Day03__Request.iml" filepath="$PROJECT_DIR$/Day03__Request/Day03__Request.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day04_Cookie_Session/Day04_Cookie_Session.iml" filepath="$PROJECT_DIR$/Day04_Cookie_Session/Day04_Cookie_Session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day_05_user_case/Day05_Test/Day05_Test.iml" filepath="$PROJECT_DIR$/Day_05_user_case/Day05_Test/Day05_Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day05_el_jstl/Day05_el_jstl.iml" filepath="$PROJECT_DIR$/Day05_el_jstl/Day05_el_jstl.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day_03_Test/Day_03_Test.iml" filepath="$PROJECT_DIR$/Day_03_Test/Day_03_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day_05_Remake/Day_05_Remake.iml" filepath="$PROJECT_DIR$/Day_05_Remake/Day_05_Remake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day_05_user_case/Day_05_Test/Day_05_Test.iml" filepath="$PROJECT_DIR$/Day_05_user_case/Day_05_Test/Day_05_Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day_05_user_case/Day_05_user_case.iml" filepath="$PROJECT_DIR$/Day_05_user_case/Day_05_user_case.iml" />
     </modules>
   </component>
