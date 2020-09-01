@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService
     }
 
     @Override
-    public User login(String username, String password)
+    public User login(User user)
     {
         return dao.findUserByUserNameAndPassword(user.getUsername(),user.getPassword());
     }

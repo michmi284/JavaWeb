@@ -32,7 +32,8 @@ public class LoginServlet extends HttpServlet
         String verifycode = req.getParameter("verifycode");
         HttpSession session = req.getSession();
         String checkcode_server = (String) session.getAttribute("CHECKCODE_SERVER");
-        if (!checkcode_server.equals(verifycode))
+        session.removeAttribute("CHECKCODE_SERVER");
+        if (!checkcode_server.equalsIgnoreCase(verifycode))
         {
             req.setAttribute("login_msg", "验证码错误");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
@@ -42,7 +43,7 @@ public class LoginServlet extends HttpServlet
         User user = new User();
         try
         {
-            BeanUtils.populate(user,map);
+            BeanUtils.populate(user, map);
         } catch (IllegalAccessException e)
         {
             e.printStackTrace();
@@ -52,12 +53,14 @@ public class LoginServlet extends HttpServlet
         }
         UserServiceImpl service = new UserServiceImpl();
         User loginUser = service.login(user);
-        if (loginUser!=null){
-            session.setAttribute("user",loginUser);
-            resp.sendRedirect(req.getContextPath()+"index.jsp");
-        }else{
-            req.setAttribute("login_msg","用户名或密码错误");
-            
+        if (loginUser != null)
+        {
+            session.setAttribute("user", loginUser);
+            resp.sendRedirect(req.getContextPath() + "index.jsp");
+        } else
+        {
+            req.setAttribute("login_msg", "用户名或密码错误");
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
     }
 }

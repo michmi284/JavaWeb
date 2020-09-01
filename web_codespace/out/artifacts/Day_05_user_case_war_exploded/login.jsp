@@ -31,10 +31,10 @@
 <body>
 <div class="container" style="width: 400px;">
     <h3 style="text-align: center;">管理员登录</h3>
-    <form action="login" method="post">
+    <form action="${pageContext.request.contextPath}/loginServlet" method="post">
         <div class="form-group">
             <label for="user">用户名：</label>
-            <input type="text" name="user" class="form-control" id="user" placeholder="请输入用户名"/>
+            <input type="text" name="username" class="form-control" id="user" placeholder="请输入用户名"/>
         </div>
 
         <div class="form-group">
@@ -46,7 +46,8 @@
             <label for="vcode">验证码：</label>
             <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码"
                    style="width: 120px;"/>
-            <a href="javascript:refreshCode()"><img src="${pageContext.request.contextPath}/checkCodeServlet"
+            <a href="javascript:refreshCode()">
+                <img src="${pageContext.request.contextPath}/checkCodeServlet"
                                                     title="看不清点击刷新" id="vcode"/></a>
         </div>
         <hr/>
@@ -59,7 +60,7 @@
     <div class="alert alert-warning alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span></button>
-        <strong>登录失败!</strong>
+        <strong>${login_msg}</strong>
     </div>
 </div>
 </body>
