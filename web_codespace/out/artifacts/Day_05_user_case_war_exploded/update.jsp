@@ -3,7 +3,7 @@
 <!-- 网页使用的语言 -->
 <html lang="zh-CN">
 <head>
-    <%--    <base href="<%=basePath%>"/>--%>
+<%--    <base href="<%=basePath%>"/>--%>
     <!-- 指定字符集 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,27 +19,27 @@
 <div class="container" style="width: 400px;">
     <h3 style="text-align: center;">修改联系人</h3>
     <form action="${pageContext.request.contextPath}/updateUserServlet" method="post">
+<%--        隐藏数据--%>
         <input type="hidden" name="id" value="${user.id}">
         <div class="form-group">
             <label for="name">姓名：</label>
-            <input type="text" class="form-control" id="name" name="name" value="${user.name}" readonly="readonly"
-                   placeholder="请输入姓名"/>
+            <input type="text" class="form-control" id="name" name="name" value="${user.name}" readonly="readonly" placeholder="请输入姓名" />
         </div>
 
         <div class="form-group">
             <label>性别：</label>
-            <input type="radio" name="sex" value="男"/>男
-            <input type="radio" name="sex" value="女"/>女
+            <input type="radio" name="gender" value="男"  />男
+            <input type="radio" name="gender" value="女"  />女
         </div>
 
         <div class="form-group">
             <label for="age">年龄：</label>
-            <input type="text" class="form-control" id="age" name="age" placeholder="请输入年龄"/>
+            <input type="text" class="form-control" id="age"  name="age" placeholder="请输入年龄" />
         </div>
 
         <div class="form-group">
             <label for="address">籍贯：</label>
-            <select name="address" class="form-control">
+            <select name="address" class="form-control" >
                 <option value="广东">广东</option>
                 <option value="广西">广西</option>
                 <option value="湖南">湖南</option>
@@ -57,8 +57,8 @@
         </div>
 
         <div class="form-group" style="text-align: center">
-            <input class="btn btn-primary" type="submit" value="提交"/>
-            <input class="btn btn-default" type="reset" value="重置"/>
+            <input class="btn btn-primary" type="submit" value="提交" />
+            <input class="btn btn-default" type="reset" value="重置" />
             <input class="btn btn-default" type="button" value="返回"/>
         </div>
     </form>

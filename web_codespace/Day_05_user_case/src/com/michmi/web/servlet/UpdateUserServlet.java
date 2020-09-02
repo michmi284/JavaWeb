@@ -1,6 +1,7 @@
 package com.michmi.web.servlet;
 
 import com.michmi.domain.User;
+import com.michmi.service.UserService;
 import com.michmi.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -14,33 +15,32 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 @WebServlet("/updateUserServlet")
-public class UpdateUserServlet extends HttpServlet
-{
+public class UpdateUserServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 1. 设置编码
         req.setCharacterEncoding("utf-8");
+        // 2 .获取参数
         Map<String, String[]> map = req.getParameterMap();
+        // 3
         User user = new User();
-        try
-        {
+        try {
             BeanUtils.populate(user, map);
-        } catch (IllegalAccessException e)
-        {
+        } catch (IllegalAccessException e) {
             e.printStackTrace();
-        } catch (InvocationTargetException e)
-        {
+        } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+        // service
         UserServiceImpl service = new UserServiceImpl();
-        service.updateUser(user);
-        resp.sendRedirect(req.getContextPath() + "/userListServlet");
-
+        service.update(user);
+        // 5. 重定向到 list.jsp
+//        resp.sendRedirect(req.getContextPath()+"/userListServlet");
+        resp.sendRedirect(req.getContextPath()+"/findUserServlet");
     }
 }

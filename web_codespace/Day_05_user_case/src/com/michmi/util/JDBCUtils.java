@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
-
 public class JDBCUtils {
     private static DataSource ds;
     static {
@@ -19,6 +18,7 @@ public class JDBCUtils {
 
             InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties");
             pro.load(is);
+            // 初始化
             ds = DruidDataSourceFactory.createDataSource(pro);
         } catch (IOException e){
             e.printStackTrace();

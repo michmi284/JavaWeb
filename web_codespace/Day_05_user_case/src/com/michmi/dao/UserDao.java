@@ -3,19 +3,31 @@ package com.michmi.dao;
 import com.michmi.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
-public interface UserDao
-{
-    //用户操作dao
+public interface UserDao {
+    // 用户操作dao
+
     public List<User> findAll();
 
-    void add(User user);
+    public  void add(User user);
 
-    void update(User user);
+    public void update(User user);
 
-    User findById(int id);
+    public void delete(int id);
 
-    void delete(int id);
+    public User findById(int id);
 
     public User findUserByUserNameAndPassword(String username, String password);
+    /**
+     * 查询总记录数
+     */
+    int findTotalCount( Map<String, String[]> condition);
+    /**
+     * 分页查询每页记录
+     */
+    List<User> findByPage(int start, int rows, Map<String, String[]> condition);
+
+
+
 }

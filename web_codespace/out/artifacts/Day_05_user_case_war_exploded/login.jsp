@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/9/1
-  Time: 15:18
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -21,11 +15,14 @@
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        //切换验证码
+        // 切换验证码
         function refreshCode() {
-            var vcode = document.getElementById("vcode")
-            vcode.src = "${pageContext.request.contextPath}/checkCodeServlet?time=" + new Date().getTime()
+              var vcode =   document.getElementById("vcode")
+            vcode.src = "${pageContext.request.contextPath}/checkCodeServlet?time="+new Date().getTime();
         }
+
+
+
     </script>
 </head>
 <body>
@@ -44,11 +41,9 @@
 
         <div class="form-inline">
             <label for="vcode">验证码：</label>
-            <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码"
-                   style="width: 120px;"/>
+            <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
             <a href="javascript:refreshCode()">
-                <img src="${pageContext.request.contextPath}/checkCodeServlet"
-                                                    title="看不清点击刷新" id="vcode"/></a>
+                <img src="${pageContext.request.contextPath}/checkCodeServlet" title="看不清点击刷新" id="vcode"/></a>
         </div>
         <hr/>
         <div class="form-group" style="text-align: center;">
@@ -58,7 +53,7 @@
 
     <!-- 出错显示的信息框 -->
     <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert">
+        <button type="button" class="close" data-dismiss="alert" >
             <span>&times;</span></button>
         <strong>${login_msg}</strong>
     </div>

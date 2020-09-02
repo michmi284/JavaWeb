@@ -18,8 +18,8 @@
         <option value="FxmlFile" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,19 +50,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day_05_user_case/src/com/michmi/web/servlet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day_05_user_case/web" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_user_case\src\com\michmi\web\servlet" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_Remake\src\remake\domain" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_Remake\web\WEB-INF" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_Remake\src" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_Remake\src\remake\util" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_user_case\web" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day03__Request\web" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day03__Request\src" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day03__Request" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.michmi.web.servlet" />
@@ -71,11 +70,12 @@
       <recent name="com.michmi.servlet" />
       <recent name="com.michmi.session" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_user_case\web" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day03__Request\web" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day03__Request\src" />
-      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day03__Request" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_user_case\src\com\michmi\dao" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_user_case\src\com\michmi" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_user_case\src\com\michmi\web\servlet" />
+      <recent name="D:\JavaWeb\JavaWeb\web_codespace\Day_05_Remake\src\remake\domain" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.31">
@@ -305,6 +305,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -337,7 +342,8 @@
       <workItem from="1598870126760" duration="968000" />
       <workItem from="1598918648287" duration="12232000" />
       <workItem from="1598937756755" duration="17950000" />
-      <workItem from="1599004932720" duration="2120000" />
+      <workItem from="1599004932720" duration="8602000" />
+      <workItem from="1599042550460" duration="2341000" />
     </task>
     <servers />
   </component>
@@ -353,14 +359,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="642" y="136" key="#Tomcat_Server/0.0.1440.860@0.0.1440.860" timestamp="1598337072167" />
-    <state x="225" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598938543048">
+    <state x="225" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599046270005">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="225" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1598938543048" />
-    <state x="885" y="35" width="494" height="655" key="#com.intellij.ide.util.MemberChooser" timestamp="1599007782086">
+    <state x="225" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1599046270005" />
+    <state x="885" y="35" width="494" height="655" key="#com.intellij.ide.util.MemberChooser" timestamp="1599045826834">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="885" y="35" width="494" height="655" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1599007782086" />
+    <state x="885" y="35" width="494" height="655" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1599045826834" />
     <state x="422" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1598865259636">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -441,10 +447,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="385" y="0" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1598344007620" />
-    <state x="478" y="222" key="com.intellij.ide.util.TipDialog" timestamp="1599005002522">
+    <state x="478" y="222" key="com.intellij.ide.util.TipDialog" timestamp="1599042549577">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="478" y="222" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1599005002522" />
+    <state x="478" y="222" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1599042549577" />
     <state x="778" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1598857939973">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

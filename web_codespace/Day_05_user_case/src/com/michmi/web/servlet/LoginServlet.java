@@ -15,51 +15,52 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 @WebServlet("/loginServlet")
-public class LoginServlet extends HttpServlet
-{
+public class LoginServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
-        // 1.调用 完成查询
-        req.getRequestDispatcher("utf-8");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 1. 设置编码
+        req.setCharacterEncoding("utf-8");
+
         String verifycode = req.getParameter("verifycode");
+
+        // 验证码校验
+
         HttpSession session = req.getSession();
         String checkcode_server = (String) session.getAttribute("CHECKCODE_SERVER");
         session.removeAttribute("CHECKCODE_SERVER");
-        if (!checkcode_server.equalsIgnoreCase(verifycode))
-        {
-            req.setAttribute("login_msg", "验证码错误");
+        if (!checkcode_server.equalsIgnoreCase(verifycode)){
+
+            req.setAttribute("login_msg","验证码错误");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
             return;
         }
         Map<String, String[]> map = req.getParameterMap();
         User user = new User();
-        try
-        {
+        try {
             BeanUtils.populate(user, map);
-        } catch (IllegalAccessException e)
-        {
+        } catch (IllegalAccessException e) {
             e.printStackTrace();
-        } catch (InvocationTargetException e)
-        {
+        } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+
+        // service查询
         UserServiceImpl service = new UserServiceImpl();
+
         User loginUser = service.login(user);
-        if (loginUser != null)
-        {
+        if (loginUser != null){
             session.setAttribute("user", loginUser);
-            resp.sendRedirect(req.getContextPath() + "index.jsp");
-        } else
-        {
-            req.setAttribute("login_msg", "用户名或密码错误");
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+            resp.sendRedirect(req.getContextPath()+"index.jsp");
+        }else {
+            req.setAttribute("login_msg","用户名或者密码错误");
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
+
+
     }
 }

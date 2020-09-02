@@ -10,80 +10,47 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.List;
 
-public class TestUserDaoImpl
-{
+public class TestUserDaoImpl {
     @Test
-    public void DaoImplTest()
-    {
+    public void userDaoImplTest(){
         UserDao dao = new UserDaoImpl();
         List<User> users = dao.findAll();
-
-        for (User user :
-                users)
-        {
+        for (User user : users) {
             System.out.println(user);
         }
     }
-
     @Test
-    public void test2()
-    {
+    public void test2(){
         User user = new User();
-        user.setName("LY");
-        user.setGender("男");
-        user.setAge(22);
-        user.setAddress("彰武");
-        user.setQq("12345");
-        user.setEmail("12345@qq.com");
+        user.setName("dada");
+        user.setGender("人妖");
+        user.setAddress("泰国");
+        user.setQq("23123213");
+        user.setAge(323);
+        user.setEmail("3242342@qq.com");
         UserDao dao = new UserDaoImpl();
         dao.add(user);
     }
 
     @Test
-    public void test3()
-    {
+    public void test3() throws InvocationTargetException, IllegalAccessException {
         HashMap<String, String> map = new HashMap<>();
-        map.put("name", "KDY");
-        map.put("gender", "男");
-        map.put("age", "22");
-        map.put("address", "丹东");
-        map.put("qq", "23456");
-        map.put("email", "23456@qq.com");
+        map.put("name", "zhansgan");
+        map.put("age", "12");
+
         User user = new User();
-        try
-        {
-            BeanUtils.populate(user, map);
-        } catch (IllegalAccessException e)
-        {
-            e.printStackTrace();
-        } catch (InvocationTargetException e)
-        {
-            e.printStackTrace();
-        }
+        BeanUtils.populate(user, map);
+
         System.out.println(user);
+
+
     }
 
+
     @Test
-    public void test4()
-    {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("gender", "男");
-        map.put("age", "22");
-        map.put("address", "丹东");
-        map.put("qq", "23456");
-        map.put("email", "23456@qq.com");
-        map.put("id","15");
-        User user = new User();
-        try
-        {
-            BeanUtils.populate(user, map);
-        } catch (IllegalAccessException e)
-        {
-            e.printStackTrace();
-        } catch (InvocationTargetException e)
-        {
-            e.printStackTrace();
-        }
+    public void test4(){
+        UserDaoImpl dao = new UserDaoImpl();
+        User user = dao.findUserByUserNameAndPassword("eric", "123");
         System.out.println(user);
     }
 }
