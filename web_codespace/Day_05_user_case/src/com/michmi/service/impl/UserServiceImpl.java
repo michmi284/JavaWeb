@@ -48,4 +48,17 @@ public class UserServiceImpl implements UserService
     {
         return dao.findUserByUserNameAndPassword(user.getUsername(),user.getPassword());
     }
+
+    @Override
+    public void deleteSelectedUser(String[] ids)
+    {
+        //根据id批量删除数据
+        if (ids!=null && ids.length>0){
+            for (String id :
+                    ids)
+            {
+                dao.delete(Integer.parseInt(id));
+            }
+        }
+    }
 }
